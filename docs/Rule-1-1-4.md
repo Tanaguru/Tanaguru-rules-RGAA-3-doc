@@ -2,7 +2,7 @@
 
 ## Summary
 
-@@@ TO-DO
+This test consists in checking whether each `<area>` of a server image map is doubled by a link in the page.
 
 ## Business description
 
@@ -30,27 +30,47 @@ Chaque <a href="http://references.modernisation.gouv.fr/sites/default/files/RGAA
 
 ### Decision level
 
-**Decidable**
+**Semi-decidable**
 
 ## Algorithm
 
 ### Selection
 
+#### Set1
+
+All the `<img>` tags with a `"ismap"` attribute 
+
 ### Process
+
+#### Tests
+
+##### Test1
+
+For each element of Set1, produce a MessageA
+
+#### Messages
+
+##### MessageA : Check a link is associated with the server-sided image map
+
+-    code : Check a link is associated with the server-sided image map
+-    status: Pre-qualified (NMI or warning)
+-    case : For each element of Set1
+-    parameter : tag name
+-    present in source : yes
 
 ### Analysis
 
-#### Passed
-
-#### Failed
-
 #### Not Applicable
+
+The page has no `<img>` tag with a `"ismap"` attribute (Set1 is empty)
 
 #### Pre-qualified
 
-#### No Tested 
+The selection is not empty
 
+## Notes
 
+We only detect the elements of the set1 to determine whether the test is applicable
 
 
 
